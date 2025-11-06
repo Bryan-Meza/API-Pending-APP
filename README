@@ -1,0 +1,61 @@
+# Web-API Example app
+
+Web-API is a Node app to show how an API is being build.
+
+## Requirements
+
+Install NVM library to handle the node versions : 
+
+https://github.com/nvm-sh/nvm
+
+## Installation
+
+
+```bash
+nvm install v17.6.0
+nvm use
+npm install 
+
+```
+
+
+## Usage
+
+```node
+node api.js 
+```
+
+## Dockerized app 
+
+Docker needs to be installed in order to set this up.
+
+The first time this needs to be executed :
+
+```bash
+docker build -t nodejs-image-demo .
+docker run --name nodejs-image-demo -p 80:3000 -d nodejs-image-demo
+
+
+```
+
+The next time that this needs to be executed :
+```bash
+docker start nodejs-image-demo
+
+```
+if the docker image needs to be stopped:
+
+```bash
+docker stop nodejs-image-demo
+
+```
+
+The app will be running under port 80, this is intendeed to explain how docker works and how the mapping of ports are being handled. 
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
